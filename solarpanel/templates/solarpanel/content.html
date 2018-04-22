@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Content</title>
+</head>
+<body>
+<h1> LIST ENJOY SURFURING</h1>
+
+<h1>banner section</h1>
+{% for c in con %}
+{% if c.type is 1 %}
+    <h1><a href="{% url 'solarpanel:contentdetail' pk=c.pk %}">{{ c.heading }} </a></h1>
+ {% else %}
+ {% endif %}
+{% endfor %}
+
+<h1>project section</h1>
+{% for c in con %}
+{% if c.type is 2 %}
+<h1><a href="{% url 'solarpanel:contentdetail' pk=c.pk %}">{{ c.heading }} </a></h1>
+{% else %}
+{% endif %}
+{% endfor %}
+
+<h1>career section</h1>
+{% for c in con %}
+{% if c.type is 3 %}
+<h1><a href="{% url 'solarpanel:contentdetail' pk=c.pk %}">{{ c.heading }} </a></h1>
+{% else %}
+{% endif %}
+{% endfor %}
+
+
+<h1>team section</h1>
+{% for c in con %}
+{% if c.type is 4 %}
+
+<h1><a href="{% url 'solarpanel:contentdetail' pk=c.pk %}">{{ c.name }} </a></h1>
+{% else %}
+{% endif %}
+{% endfor %}
+
+
+<h1>media section</h1>
+{% for c in con %}
+{% if c.type is 5 %}
+<h1><a href="{% url 'solarpanel:contentdetail' pk=c.pk %}">{{ c.heading }} </a></h1>
+{% else %}
+{% endif %}
+{% endfor %}
+
+
+</body>
+</html>

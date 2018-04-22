@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+    {% block body_block %}
+        <h1>For List of all sections Click on this</h1>
+        <p><a href="{% url 'solarpanel:list' %}"> <h2>LIST</h2></a></p>
+
+        <h1>For create view click on this</h1>
+        <p><a href="{% url 'solarpanel:Banner' %}"> <h2>Banner</h2></a></p>
+                <p><a href="{% url 'solarpanel:Project' %}"> <h2>Project</h2></a></p>
+                <p><a href="{% url 'solarpanel:Career' %}"> <h2>Career</h2></a></p>
+                <p><a href="{% url 'solarpanel:Team' %}"> <h2>Team</h2></a></p>
+                <p><a href="{% url 'solarpanel:Media' %}"> <h2>Media</h2></a></p>
+
+    {% endblock %}

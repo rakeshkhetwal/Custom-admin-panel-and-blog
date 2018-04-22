@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+    {% block body_block %}
+      <form method="post">
+        {% csrf_token %}
+      <p>{{ object.description }}</p>
+          <p>{{ object.heading }}</p>
+          <p>{{ object.photo }}</p>
+          <p>{{ object.name }}</p>
+        <button class="btn btn-primary" type="submit">Yes, remove it!</button>
+  </form>
+    {% endblock %}

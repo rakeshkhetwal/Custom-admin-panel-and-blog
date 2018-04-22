@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Content</title>
+</head>
+<body>
+<h1> Detail </h1>
+
+
+
+{% if c.type is 1 %}
+<h1>banner section</h1>
+
+
+<p>{{ c.description }}</p>
+<p>{{ c.type }}</p>
+    
+<p><img src="{{ c.photo }}" alt=""></p>
+
+<a href="{% url 'solarpanel:bannerupdate' pk=c.pk %}">UPDATE BANNER</a>
+<a href="{% url 'solarpanel:bannerdelete' pk=c.pk %}">DELETE BANNER</a>
+{% elif c.type is 2 %}
+
+<h1>project section</h1>
+
+{{ c.type }}
+{{ c.description }}
+<p><img src="{{ c.photo }}" alt=""></p>
+
+<a href="{% url 'solarpanel:projectupdate' pk=c.pk %}">UPDATE PROJECT</a>
+<a href="{% url 'solarpanel:projectdelete' pk=c.pk %}">DELETE PROJECT</a>
+
+{% elif c.type is 3 %}
+
+<h1>career section</h1>
+
+{{ c.type }}
+{{ c.description }}
+<p><img src="{{ c.photo }}" alt=""></p>
+<a href="{% url 'solarpanel:careerupdate' pk=c.pk %}">UPDATE CAREER</a>
+<a href="{% url 'solarpanel:careerdelete' pk=c.pk %}">DELETE CAREER</a>
+
+{% elif c.type is 4 %}
+
+<h1>team section</h1>
+
+{{ c.type }}
+{{ c.name }}
+<p><img src="{{ c.photo }}" alt=""></p>
+<a href="{% url 'solarpanel:teamupdate' pk=c.pk %}">UPDATE TEAM MEMBER</a>
+<a href="{% url 'solarpanel:teamdelete' pk=c.pk %}">DELETE TEAM MEMBER</a>
+
+
+{% elif c.type is 5 %}
+
+<h1>media section</h1>
+
+{{ c.type }}
+{{ c.name }}
+<p><img src="{{ c.photo }}" alt=""></p>
+<a href="{% url 'solarpanel:mediaupdate' pk=c.pk %}">UPDATE media</a>
+<a href="{% url 'solarpanel:mediadelete' pk=c.pk %}">DELETE media</a>
+
+{% endif %}
+
+</body>
+</html>

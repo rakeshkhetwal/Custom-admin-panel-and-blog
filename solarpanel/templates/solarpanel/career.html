@@ -1,0 +1,35 @@
+{%  extends 'base.html' %}
+
+    {% block body_block %}
+
+         <form method="post" action="" enctype="multipart/form-data">
+
+          {% csrf_token %}
+         <p> <label>Add Icon</label>
+             <input type="file" name="photo">
+         </p>
+         <p>
+          <h1><label>Add heading</label></h1>
+          <input type="text" name="heading" >
+         </p>
+
+          <p>
+          <label>Add Description</label>
+          <input type="text" name="description" >
+          </p>
+
+          <p>
+          <label>No of openings</label>
+          <input type="number" name="openings" >
+          </p>
+
+          <p>
+
+          <input type="submit" name="submit" value="submit" >
+          </p>
+
+
+
+      </form>
+
+    {% endblock %}
